@@ -4,7 +4,7 @@ var message=[];
   database.collection("quotes").get()
   .then(function(querySnapshot) {
         querySnapshot.forEach(function(doc) {
-            console.log(doc.id, " => ", doc.data());
+          doc.id, " => ", doc.data();
             message.push(doc.data());
         });
         pickMessage();
