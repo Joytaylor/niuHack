@@ -1,0 +1,19 @@
+body {
+  padding-top: 0px;
+  margin-top: 10%;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+ul{
+  width:100%;
+  list-style-type: none;
+}
+
+iframe{
+  width:100%;
+  height:500px;
+}
+li{
+  padding:10px;
+}
