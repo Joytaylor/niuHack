@@ -1,5 +1,6 @@
 <!DOCTYPE HTML >
 <html>
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -7,58 +8,84 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <style>
-li{
-  width:20%;
+
+body {
+  padding-top: 0px;
+  margin-top: 10%;
 }
-body { padding-top: 0px;}
 
 div{
-  margin-left: 5%;
-  margin-right: 5%;
-  padding: 10px;
+
+  padding: 20px;
 
 }
 ul{
-  position:fixed;
-  background-color: #ffffff;
   width:100%;
   height:5%;
+  list-style-type: none;
 }
-.topLink{
-    margin-right: 80%;
-}
-div.changeHeight{
-  height: 50%;
-}
+
 iframe{
   width:100%;
-  height:1000px;
+  height:500px;
+}
+li{
+  padding:10px;
+}
+.affix {
+    top: 0;
+    width: 100%;
+    z-index: 9999 !important;
+    position:sticky;
+  }
+.top{
+
 }
 
 
 </style>
+</head>
 <body>
-<ul class="nav nav-pills">
-  <li class="nav-item">
-    <a class="nav-link" href="#SuicidePreventionLifeline"> Suicide Prevention Lifeline </a>
-  </li>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$document.ready(function(){
+  $(window).on('scroll', function(event) {
+    if ( $(window).scrollTop() == settings.scrollTopPx || scrollValue > 0) {
+         $('.navbar').addClass('fixed-top');
+    }
+});
+});
+</script>
 
-  <li class="nav-item">
-    <a class="nav-link" href="#remindsupport"> Remind Support</a>
-  </li>
+  <nav class="navbar navbar-expand-md bg-light navbar-light fixed-top" data-spy="affix" >
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar ">
+        <li class="nav-item">
+          <a class="nav-link" href="#SuicidePreventionLifeline"> Suicide Prevention Lifeline </a>
+        </li>
 
+        <li class="nav-item">
+          <a class="nav-link" href="#remindsupport"> Remind Support</a>
+        </li>
 
-  <li class="nav-item">
-    <a class="nav-link disabled" href="#">More coming soon</a>
-  </li>
-  <li class="nav-item">
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">More coming soon</a>
+        </li>
+        <li class="nav-item">
 
-  </li>
+        </li>
 
-<li class="nav-item ">
-  <a class="nav-link" id ="toplink" href="#top">Back to the Top</a>
-</li>
-</ul>
+      <li class="nav-item ">
+        <a class="nav-link" id ="toplink" href="#top">Back to the Top</a>
+      </li>
+
+      </ul>
+    </div>
+  </nav>
+
 <div  id="top"><div>
 <div  id = "SuicidePreventionLifeline" >
   <h1> Suicide Prevention Lifeline</h1>
