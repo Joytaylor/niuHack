@@ -120,7 +120,28 @@ var message=[];
     });
 
   function pickMessage(){
-    $("#goodQuote").text(message[Math.floor(Math.random()*message.length)].quote);
+    var word= "";
+    var i = 0;
+    var pastNum = [];
+    while(i<3){
+      var tempNum = Math.floor(Math.random()*message.length);
+  if( pastNum.find(function(element) {
+  return element == tempNum;
+
+})!=null){
+
+}
+else{
+  $("#goodQuote"+word).text(message[tempNum].quote);
+  pastNum.push(tempNum);
+
+
+  word++;
+  i++;
+}
+
+    }
+
 
   }
 
