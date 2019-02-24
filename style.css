@@ -17,3 +17,8 @@ iframe{
 li{
   padding:10px;
 }
+.carousel-caption{
+  margin-bottom: 2.5%;
+  text-shadow: rgba(70, 70, 195);
+
+}
