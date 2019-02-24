@@ -104,47 +104,7 @@ src="https://www.remindsupport.org/">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script>
-var message=[];
-  var database = firebase.firestore(app);
-
-  database.collection("quotes").get()
-  .then(function(querySnapshot) {
-        querySnapshot.forEach(function(doc) {
-            console.log(doc.id, " => ", doc.data());
-            message.push(doc.data());
-        });
-        pickMessage();
-    })
-    .catch(function(error) {
-        console.log("Error getting documents: ", error);
-    });
-
-  function pickMessage(){
-    var word= "";
-    var i = 0;
-    var pastNum = [];
-    while(i<3){
-      var tempNum = Math.floor(Math.random()*message.length);
-  if( pastNum.find(function(element) {
-  return element == tempNum;
-
-})!=null){
-
-}
-else{
-  $("#goodQuote"+word).text(message[tempNum].quote);
-  pastNum.push(tempNum);
-
-
-  word++;
-  i++;
-}
-
-    }
-
-
-  }
+<script src="script.js">
 
 </script>
 </html>
